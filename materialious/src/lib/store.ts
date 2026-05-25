@@ -284,6 +284,24 @@ export const sponsorBlockUrlStore: Writable<string | null | undefined> = persist
 	'sponsorBlockUrl'
 );
 
+export const sponsorBlockSegmentSubmissionsEnabledStore: Writable<boolean> = persist(
+	writable(false),
+	createStorage(),
+	'sponsorBlockSegmentSubmissionsEnabled'
+);
+
+export const sponsorBlockUsernameStore: Writable<string | undefined> = persist(
+	writable(undefined),
+	createStorage(),
+	'sponsorBlockUsername'
+);
+
+export const sponsorBlockUserIDStore: Writable<string | undefined> = persist(
+	writable(undefined),
+	createStorage(),
+	'sponsorBlockUserID'
+);
+
 export const sponsorBlockCategoriesStore: Writable<
 	Record<string, 'automatic' | 'manual' | 'timeline' | undefined>
 > = persist(writable({}), createStorage(), 'sponsorBlockCategoriesv2');
